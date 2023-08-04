@@ -1,0 +1,999 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr User 17000 23622
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_Microchip_ATmega:ATmega328-PU U1
+U 1 1 6153CB9A
+P 6025 10575
+F 0 "U1" H 5381 10621 50  0000 R CNN
+F 1 "ATmega328-PU" H 5381 10530 50  0000 R CNN
+F 2 "Package_DIP:DIP-28_W7.62mm" H 6025 10575 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/ATmega328_P%20AVR%20MCU%20with%20picoPower%20Technology%20Data%20Sheet%2040001984A.pdf" H 6025 10575 50  0001 C CNN
+	1    6025 10575
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0101
+U 1 1 615428BD
+P 6025 8900
+F 0 "#PWR0101" H 6025 8750 50  0001 C CNN
+F 1 "+5V" H 6040 9073 50  0000 C CNN
+F 2 "" H 6025 8900 50  0001 C CNN
+F 3 "" H 6025 8900 50  0001 C CNN
+	1    6025 8900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6025 8900 6025 8950
+$Comp
+L 74xx:74LS595 U3
+U 1 1 615450D0
+P 9025 9675
+F 0 "U3" H 9025 10456 50  0000 C CNN
+F 1 "74LS595" H 9025 10365 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_LongPads" H 9025 9675 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74ls595" H 9025 9675 50  0001 C CNN
+	1    9025 9675
+	1    0    0    -1  
+$EndComp
+$Comp
+L Driver_Motor:Pololu_Breakout_A4988 A1
+U 1 1 6154832B
+P 10800 9775
+F 0 "A1" H 10850 10656 50  0000 C CNN
+F 1 "Pololu_Breakout_A4988" H 10850 10565 50  0000 C CNN
+F 2 "Module:Pololu_Breakout-16_15.2x20.3mm" H 11075 9025 50  0001 L CNN
+F 3 "https://www.pololu.com/product/2980/pictures" H 10900 9475 50  0001 C CNN
+	1    10800 9775
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_DIP_x01 SW3
+U 1 1 6154BB17
+P 12975 14125
+F 0 "SW3" H 12975 14392 50  0000 C CNN
+F 1 "SW_DIP_x01" H 12975 14301 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 12975 14125 50  0001 C CNN
+F 3 "~" H 12975 14125 50  0001 C CNN
+	1    12975 14125
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_DIP_x01 SW1
+U 1 1 6154C9B9
+P 7600 10875
+F 0 "SW1" H 7600 11142 50  0000 C CNN
+F 1 "SW_DIP_x01" H 7600 11051 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_PUSH_6mm" H 7600 10875 50  0001 C CNN
+F 3 "~" H 7600 10875 50  0001 C CNN
+	1    7600 10875
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6625 10875 7200 10875
+$Comp
+L Device:R R1
+U 1 1 6154E596
+P 7200 10725
+F 0 "R1" H 7270 10771 50  0000 L CNN
+F 1 "10KΩ" H 7270 10680 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 7130 10725 50  0001 C CNN
+F 3 "~" H 7200 10725 50  0001 C CNN
+	1    7200 10725
+	1    0    0    -1  
+$EndComp
+Connection ~ 7200 10875
+Wire Wire Line
+	7200 10875 7300 10875
+$Comp
+L power:+5V #PWR0103
+U 1 1 6154F7BE
+P 7200 10475
+F 0 "#PWR0103" H 7200 10325 50  0001 C CNN
+F 1 "+5V" H 7215 10648 50  0000 C CNN
+F 2 "" H 7200 10475 50  0001 C CNN
+F 3 "" H 7200 10475 50  0001 C CNN
+	1    7200 10475
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7200 10475 7200 10575
+Wire Wire Line
+	7900 10875 8025 10875
+Wire Wire Line
+	8625 9575 8250 9575
+Wire Wire Line
+	7575 9575 7575 8950
+Connection ~ 6025 8950
+Wire Wire Line
+	6025 8950 6025 9075
+Wire Wire Line
+	8625 9275 6725 9275
+Wire Wire Line
+	6725 9275 6725 11575
+Wire Wire Line
+	6725 11575 6625 11575
+Wire Wire Line
+	8625 9475 8325 9475
+Wire Wire Line
+	6750 11775 6625 11775
+Wire Wire Line
+	6750 9475 6750 11775
+Wire Wire Line
+	8625 9775 8200 9775
+Wire Wire Line
+	6775 9775 6775 11675
+Wire Wire Line
+	6625 11675 6775 11675
+Wire Wire Line
+	8500 10375 8500 10250
+Wire Wire Line
+	8500 9875 8625 9875
+Wire Wire Line
+	9425 9275 10025 9275
+Wire Wire Line
+	10025 9275 10025 10075
+Wire Wire Line
+	10025 10075 10400 10075
+Wire Wire Line
+	9425 9375 10075 9375
+Wire Wire Line
+	10075 9375 10075 10175
+Wire Wire Line
+	10075 10175 10400 10175
+Wire Wire Line
+	9425 9475 10125 9475
+Wire Wire Line
+	10125 9475 10125 10275
+Wire Wire Line
+	10125 10275 10400 10275
+Wire Wire Line
+	10800 10575 10800 10700
+Wire Wire Line
+	9025 10700 10275 10700
+Connection ~ 10800 10700
+Wire Wire Line
+	10800 10700 11000 10700
+Wire Wire Line
+	10800 9075 10325 9075
+Wire Wire Line
+	7575 8950 7575 8800
+Wire Wire Line
+	7575 8800 8175 8800
+Wire Wire Line
+	9875 8800 9875 9075
+Connection ~ 7575 8950
+Connection ~ 9875 9075
+Wire Wire Line
+	9875 9075 9775 9075
+Wire Wire Line
+	10400 9675 10275 9675
+Wire Wire Line
+	10275 9675 10275 10700
+Connection ~ 10275 10700
+Wire Wire Line
+	10275 10700 10800 10700
+Wire Wire Line
+	10400 9475 10275 9475
+Wire Wire Line
+	10275 9475 10275 9075
+Connection ~ 10275 9075
+Wire Wire Line
+	10275 9075 9875 9075
+Wire Wire Line
+	10400 9375 10325 9375
+Wire Wire Line
+	10325 9375 10325 9075
+Connection ~ 10325 9075
+Wire Wire Line
+	10325 9075 10275 9075
+Wire Wire Line
+	9425 9575 9975 9575
+Wire Wire Line
+	9975 9575 9975 9775
+Wire Wire Line
+	9975 9775 10400 9775
+Wire Wire Line
+	10400 9875 9925 9875
+Wire Wire Line
+	9925 9875 9925 9675
+Wire Wire Line
+	9925 9675 9425 9675
+$Comp
+L Motor:Stepper_Motor_bipolar M1
+U 1 1 615601CB
+P 12175 9925
+F 0 "M1" H 12100 9600 50  0000 L CNN
+F 1 "Stepper_Motor_bipolar" H 11725 9700 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 12185 9915 50  0001 C CNN
+F 3 "http://www.infineon.com/dgdl/Application-Note-TLE8110EE_driving_UniPolarStepperMotor_V1.1.pdf?fileId=db3a30431be39b97011be5d0aa0a00b0" H 12185 9915 50  0001 C CNN
+	1    12175 9925
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11300 9775 11550 9775
+Wire Wire Line
+	11550 9775 11550 9600
+Wire Wire Line
+	11550 9600 12075 9600
+Wire Wire Line
+	12075 9600 12075 9625
+Wire Wire Line
+	11300 9675 11500 9675
+Wire Wire Line
+	11500 9675 11500 9525
+Wire Wire Line
+	11500 9525 12275 9525
+Wire Wire Line
+	12275 9525 12275 9625
+Wire Wire Line
+	11300 9875 11625 9875
+Wire Wire Line
+	11625 9875 11625 9825
+Wire Wire Line
+	11625 9825 11875 9825
+Wire Wire Line
+	11300 9975 11625 9975
+Wire Wire Line
+	11625 9975 11625 10025
+Wire Wire Line
+	11625 10025 11875 10025
+$Comp
+L 74xx:74LS595 U4
+U 1 1 6156753E
+P 9025 11575
+F 0 "U4" H 9025 12356 50  0000 C CNN
+F 1 "74LS595" H 9025 12265 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_LongPads" H 9025 11575 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74ls595" H 9025 11575 50  0001 C CNN
+	1    9025 11575
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9425 10175 9575 10175
+Wire Wire Line
+	9575 10175 9575 10625
+Wire Wire Line
+	9575 10625 8550 10625
+Wire Wire Line
+	8550 10625 8550 11175
+Wire Wire Line
+	8550 11175 8625 11175
+Wire Wire Line
+	8325 9475 8325 11375
+Wire Wire Line
+	8325 11375 8625 11375
+Connection ~ 8325 9475
+Wire Wire Line
+	8325 9475 6750 9475
+Wire Wire Line
+	8250 9575 8250 11475
+Wire Wire Line
+	8250 11475 8625 11475
+Connection ~ 8250 9575
+Wire Wire Line
+	8250 9575 7575 9575
+Wire Wire Line
+	8200 9775 8200 11675
+Wire Wire Line
+	8200 11675 8625 11675
+Connection ~ 8200 9775
+Wire Wire Line
+	8200 9775 6775 9775
+Wire Wire Line
+	8500 10250 8375 10250
+Wire Wire Line
+	8375 10250 8375 11775
+Wire Wire Line
+	8375 11775 8625 11775
+Connection ~ 8500 10250
+Wire Wire Line
+	8500 10250 8500 9875
+Wire Wire Line
+	8375 12275 8375 11775
+Connection ~ 8375 11775
+Connection ~ 9775 9075
+Wire Wire Line
+	9775 9075 9025 9075
+Wire Wire Line
+	10400 11275 9775 11275
+Wire Wire Line
+	9775 11275 9775 10975
+Connection ~ 9775 10975
+Wire Wire Line
+	10400 11375 9775 11375
+Wire Wire Line
+	9775 11375 9775 11275
+Connection ~ 9775 11275
+Wire Wire Line
+	9025 12275 9025 12600
+Connection ~ 9025 12275
+Wire Wire Line
+	11000 8850 11325 8850
+Wire Wire Line
+	11325 8850 11325 10975
+Wire Wire Line
+	11325 10975 11000 10975
+Wire Wire Line
+	11000 8850 11000 9075
+Wire Wire Line
+	10800 10975 9775 10975
+Wire Wire Line
+	10400 11575 9775 11575
+$Comp
+L Motor:Stepper_Motor_bipolar M2
+U 1 1 6159D4AA
+P 12225 11725
+F 0 "M2" H 12150 11400 50  0000 L CNN
+F 1 "Stepper_Motor_bipolar" H 11825 11475 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 12235 11715 50  0001 C CNN
+F 3 "http://www.infineon.com/dgdl/Application-Note-TLE8110EE_driving_UniPolarStepperMotor_V1.1.pdf?fileId=db3a30431be39b97011be5d0aa0a00b0" H 12235 11715 50  0001 C CNN
+	1    12225 11725
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11300 11575 11625 11575
+Wire Wire Line
+	11625 11575 11625 11175
+Wire Wire Line
+	11625 11175 12325 11175
+Wire Wire Line
+	12325 11175 12325 11425
+Wire Wire Line
+	11300 11675 11675 11675
+Wire Wire Line
+	11675 11675 11675 11300
+Wire Wire Line
+	11675 11300 12125 11300
+Wire Wire Line
+	12125 11300 12125 11425
+Wire Wire Line
+	11300 11775 11725 11775
+Wire Wire Line
+	11725 11775 11725 11625
+Wire Wire Line
+	11725 11625 11925 11625
+Wire Wire Line
+	11300 11875 11800 11875
+Wire Wire Line
+	11800 11875 11800 11825
+Wire Wire Line
+	11800 11825 11925 11825
+Wire Wire Line
+	9425 9775 9875 9775
+Wire Wire Line
+	9425 9975 9825 9975
+Wire Wire Line
+	9975 11175 9975 11675
+Wire Wire Line
+	9975 11675 10400 11675
+Wire Wire Line
+	9425 11275 9700 11275
+Wire Wire Line
+	8375 12275 9025 12275
+Wire Wire Line
+	13275 14125 13400 14125
+$Comp
+L Switch:SW_DIP_x01 SW2
+U 1 1 616927AF
+P 12975 13550
+F 0 "SW2" H 12975 13817 50  0000 C CNN
+F 1 "SW_DIP_x01" H 12975 13726 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 12975 13550 50  0001 C CNN
+F 3 "~" H 12975 13550 50  0001 C CNN
+	1    12975 13550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	12025 13425 12025 13550
+Wire Wire Line
+	12025 13550 12675 13550
+Wire Wire Line
+	13275 13550 13400 13550
+Wire Wire Line
+	13400 13550 13400 14125
+Connection ~ 13400 14125
+$Comp
+L 74xx:74LS165 U2
+U 1 1 616F997B
+P 9000 13725
+F 0 "U2" H 9000 14806 50  0000 C CNN
+F 1 "74LS165" H 9000 14715 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_LongPads" H 9000 13725 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/sn74ls165a.pdf" H 9000 13725 50  0001 C CNN
+	1    9000 13725
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	9025 10975 9600 10975
+Wire Wire Line
+	6925 11475 6625 11475
+Wire Wire Line
+	9000 12825 9600 12825
+Wire Wire Line
+	9600 12825 9600 10975
+Connection ~ 9600 10975
+Wire Wire Line
+	9600 10975 9775 10975
+Wire Wire Line
+	8375 12275 8375 14450
+Wire Wire Line
+	8375 14875 9000 14875
+Wire Wire Line
+	9000 14875 9000 14725
+Connection ~ 8375 12275
+Wire Wire Line
+	6025 8950 7575 8950
+Connection ~ 9600 12825
+Wire Wire Line
+	9775 10975 9775 9075
+Connection ~ 10275 13125
+Wire Wire Line
+	10275 12825 9600 12825
+Wire Wire Line
+	10275 13125 10275 12825
+Connection ~ 10600 14125
+Wire Wire Line
+	9900 13325 9500 13325
+Wire Wire Line
+	9900 14125 9900 13325
+Wire Wire Line
+	10600 14125 9900 14125
+Connection ~ 10600 13425
+Wire Wire Line
+	9975 13225 9500 13225
+Wire Wire Line
+	9975 13425 9975 13225
+Wire Wire Line
+	10600 13425 9975 13425
+Wire Wire Line
+	10600 13425 12025 13425
+Wire Wire Line
+	10275 13125 10275 13825
+Wire Wire Line
+	10600 13125 10275 13125
+$Comp
+L Device:R R2
+U 1 1 61693648
+P 10600 13275
+F 0 "R2" H 10670 13321 50  0000 L CNN
+F 1 "250Ω" H 10670 13230 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 10530 13275 50  0001 C CNN
+F 3 "~" H 10600 13275 50  0001 C CNN
+	1    10600 13275
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10600 13825 10275 13825
+$Comp
+L Device:R R3
+U 1 1 61663BCC
+P 10600 13975
+F 0 "R3" H 10670 14021 50  0000 L CNN
+F 1 "250Ω" H 10670 13930 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 10530 13975 50  0001 C CNN
+F 3 "~" H 10600 13975 50  0001 C CNN
+	1    10600 13975
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10600 14125 12675 14125
+Wire Wire Line
+	9700 11275 9700 11775
+Wire Wire Line
+	9825 9975 9825 12175
+Wire Wire Line
+	9850 9875 9850 12075
+Wire Wire Line
+	9875 9775 9875 11975
+Wire Wire Line
+	9775 12600 10800 12600
+Connection ~ 9775 12600
+Wire Wire Line
+	9775 11575 9775 12600
+Connection ~ 10800 12600
+Wire Wire Line
+	11000 12600 11000 12475
+Wire Wire Line
+	10800 12600 11000 12600
+Wire Wire Line
+	10800 12600 10800 12475
+Wire Wire Line
+	9025 12600 9775 12600
+$Comp
+L Driver_Motor:Pololu_Breakout_A4988 A2
+U 1 1 61583BD7
+P 10800 11675
+F 0 "A2" H 10850 12556 50  0000 C CNN
+F 1 "Pololu_Breakout_A4988" H 10850 12465 50  0000 C CNN
+F 2 "Module:Pololu_Breakout-16_15.2x20.3mm" H 11075 10925 50  0001 L CNN
+F 3 "https://www.pololu.com/product/2980/pictures" H 10900 11375 50  0001 C CNN
+	1    10800 11675
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9500 14325 9700 14325
+Wire Wire Line
+	9700 14325 9700 15125
+Wire Wire Line
+	9700 15125 6975 15125
+Wire Wire Line
+	6975 15125 6975 11375
+Wire Wire Line
+	6975 11375 6625 11375
+Wire Wire Line
+	9500 14425 9650 14425
+Wire Wire Line
+	9650 14425 9650 15075
+Wire Wire Line
+	9650 15075 7025 15075
+Wire Wire Line
+	9500 14125 9575 14125
+Wire Wire Line
+	9575 14125 9575 15025
+Wire Wire Line
+	9575 15025 7075 15025
+$Comp
+L Device:R R4
+U 1 1 617E6A34
+P 10600 14625
+F 0 "R4" H 10670 14671 50  0000 L CNN
+F 1 "250Ω" H 10670 14580 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 10530 14625 50  0001 C CNN
+F 3 "~" H 10600 14625 50  0001 C CNN
+	1    10600 14625
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10600 14475 10275 14475
+Wire Wire Line
+	10275 14475 10275 13825
+Connection ~ 10275 13825
+Wire Wire Line
+	10600 14775 9850 14775
+Wire Wire Line
+	9850 14775 9850 13425
+Wire Wire Line
+	9850 13425 9500 13425
+$Comp
+L Device:R R5
+U 1 1 617FACF4
+P 10600 15250
+F 0 "R5" H 10670 15296 50  0000 L CNN
+F 1 "250Ω" H 10670 15205 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 10530 15250 50  0001 C CNN
+F 3 "~" H 10600 15250 50  0001 C CNN
+	1    10600 15250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10600 15100 10275 15100
+Wire Wire Line
+	10275 15100 10275 14475
+Connection ~ 10275 14475
+Wire Wire Line
+	10600 15400 9775 15400
+Wire Wire Line
+	9775 15400 9775 13525
+Wire Wire Line
+	9775 13525 9500 13525
+$Comp
+L Switch:SW_DIP_x01 SW4
+U 1 1 6181079A
+P 12975 14775
+F 0 "SW4" H 12975 15042 50  0000 C CNN
+F 1 "SW_DIP_x01" H 12975 14951 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 12975 14775 50  0001 C CNN
+F 3 "~" H 12975 14775 50  0001 C CNN
+	1    12975 14775
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10600 14775 12675 14775
+Connection ~ 10600 14775
+Wire Wire Line
+	13275 14775 13400 14775
+Wire Wire Line
+	13400 14775 13400 14125
+$Comp
+L Switch:SW_DIP_x01 SW5
+U 1 1 6182768F
+P 12975 15400
+F 0 "SW5" H 12975 15667 50  0000 C CNN
+F 1 "SW_DIP_x01" H 12975 15576 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 12975 15400 50  0001 C CNN
+F 3 "~" H 12975 15400 50  0001 C CNN
+	1    12975 15400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10600 15400 12675 15400
+Connection ~ 10600 15400
+Wire Wire Line
+	13275 15400 13400 15400
+Wire Wire Line
+	13400 15400 13400 14775
+Connection ~ 13400 14775
+Wire Wire Line
+	13400 14125 13600 14125
+Wire Wire Line
+	7025 15075 7025 9375
+Wire Wire Line
+	7025 9375 6625 9375
+Wire Wire Line
+	7075 15025 7075 11275
+Wire Wire Line
+	7075 11275 6625 11275
+Wire Wire Line
+	7900 10875 7900 8450
+Connection ~ 7900 10875
+Connection ~ 8175 8800
+Wire Wire Line
+	8175 8800 9875 8800
+Wire Wire Line
+	7750 10050 6950 10050
+Wire Wire Line
+	6950 10050 6950 10275
+Wire Wire Line
+	6950 10275 6625 10275
+Wire Wire Line
+	7825 10125 6975 10125
+Wire Wire Line
+	6975 10125 6975 10375
+Wire Wire Line
+	6975 10375 6625 10375
+Wire Notes Line
+	12500 13125 12500 15650
+Wire Notes Line
+	12500 15650 13775 15650
+Wire Notes Line
+	13775 15650 13775 13125
+Wire Notes Line
+	13775 13125 12500 13125
+Text Notes 12850 13075 0    50   ~ 0
+Limit Switches
+NoConn ~ 6625 9475
+NoConn ~ 6625 9575
+NoConn ~ 6625 9675
+NoConn ~ 6625 9775
+NoConn ~ 6625 9875
+NoConn ~ 6625 10475
+NoConn ~ 6625 10575
+NoConn ~ 6625 10675
+NoConn ~ 6625 10775
+NoConn ~ 6625 11075
+NoConn ~ 6625 11175
+Wire Wire Line
+	9425 11175 9975 11175
+NoConn ~ 9425 11375
+NoConn ~ 9425 11475
+NoConn ~ 9425 11575
+NoConn ~ 9425 11675
+NoConn ~ 9425 11775
+NoConn ~ 9425 11875
+NoConn ~ 9425 12075
+Wire Wire Line
+	9875 11975 10400 11975
+Connection ~ 10400 11975
+Wire Wire Line
+	10400 11975 10425 11975
+Wire Wire Line
+	9850 12075 10400 12075
+Connection ~ 10400 12075
+Wire Wire Line
+	10400 12075 10425 12075
+Wire Wire Line
+	9825 12175 10400 12175
+Connection ~ 10400 12175
+Wire Wire Line
+	10400 12175 10425 12175
+Wire Wire Line
+	10400 11675 10425 11675
+Connection ~ 10400 11675
+Wire Wire Line
+	9700 11775 10400 11775
+Connection ~ 10400 11775
+Wire Wire Line
+	10400 11775 10425 11775
+Wire Wire Line
+	10400 11575 10425 11575
+Connection ~ 10400 11575
+NoConn ~ 6125 9075
+NoConn ~ 5425 9375
+$Comp
+L Regulator_Linear:L7812 U5
+U 1 1 61B5C577
+P 4575 12925
+F 0 "U5" H 4575 13167 50  0000 C CNN
+F 1 "L7812" H 4575 13076 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 4600 12775 50  0001 L CIN
+F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf" H 4575 12875 50  0001 C CNN
+	1    4575 12925
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:L7805 U6
+U 1 1 61B62440
+P 4575 14050
+F 0 "U6" H 4575 14292 50  0000 C CNN
+F 1 "L7805" H 4575 14201 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 4600 13900 50  0001 L CIN
+F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf" H 4575 14000 50  0001 C CNN
+	1    4575 14050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4575 13225 4575 13325
+Wire Wire Line
+	4575 13625 5200 13625
+Wire Wire Line
+	5200 13625 5200 14450
+Wire Wire Line
+	5200 14450 4575 14450
+Wire Wire Line
+	4575 14450 4575 14350
+Wire Wire Line
+	8500 10375 9025 10375
+Wire Wire Line
+	4875 12925 5025 12925
+Wire Wire Line
+	5025 12925 5025 13700
+Wire Wire Line
+	5025 13700 4125 13700
+Wire Wire Line
+	4125 13700 4125 14050
+Wire Wire Line
+	4125 14050 4275 14050
+Wire Wire Line
+	4875 14050 7700 14050
+Wire Wire Line
+	7700 14050 7700 12825
+Wire Wire Line
+	7700 12825 9000 12825
+Connection ~ 9000 12825
+Wire Wire Line
+	5200 14450 6025 14450
+Connection ~ 5200 14450
+Connection ~ 8375 14450
+Wire Wire Line
+	8375 14450 8375 14875
+$Comp
+L Connector:Conn_01x02_Female J1
+U 1 1 61BA8F78
+P 3500 12275
+F 0 "J1" H 3392 12460 50  0000 C CNN
+F 1 "Conn_01x02_Female" H 3392 12369 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 3500 12275 50  0001 C CNN
+F 3 "~" H 3500 12275 50  0001 C CNN
+	1    3500 12275
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3700 12275 4000 12275
+Wire Wire Line
+	4000 12275 4000 13325
+Wire Wire Line
+	4000 13325 4125 13325
+Connection ~ 4575 13325
+Wire Wire Line
+	4575 13325 4575 13625
+Wire Wire Line
+	3700 12375 3925 12375
+Wire Wire Line
+	3925 12375 3925 12925
+Wire Wire Line
+	3925 12925 4125 12925
+Wire Wire Line
+	13600 14125 13600 15900
+Wire Wire Line
+	13600 15900 9000 15900
+Wire Wire Line
+	9000 15900 9000 14875
+Connection ~ 9000 14875
+Wire Wire Line
+	6025 12075 6025 14450
+Connection ~ 6025 14450
+Wire Wire Line
+	6025 14450 8025 14450
+Wire Wire Line
+	9425 9875 9850 9875
+Wire Wire Line
+	8025 10875 8025 14450
+Connection ~ 8025 14450
+Wire Wire Line
+	8025 14450 8375 14450
+Wire Wire Line
+	11325 10975 11325 15650
+Wire Wire Line
+	11325 15650 5325 15650
+Wire Wire Line
+	5325 15650 5325 12925
+Wire Wire Line
+	5325 12925 5025 12925
+Connection ~ 11325 10975
+Connection ~ 5025 12925
+NoConn ~ 9500 13125
+NoConn ~ 9500 13625
+NoConn ~ 9500 13725
+NoConn ~ 9500 13825
+NoConn ~ 9500 13925
+Wire Wire Line
+	9025 10375 9025 10700
+Connection ~ 9025 10375
+Wire Wire Line
+	11000 10700 11000 10575
+$Comp
+L power:+12V #PWR0102
+U 1 1 61DD48B8
+P 4125 12775
+F 0 "#PWR0102" H 4125 12625 50  0001 C CNN
+F 1 "+12V" H 4140 12948 50  0000 C CNN
+F 2 "" H 4125 12775 50  0001 C CNN
+F 3 "" H 4125 12775 50  0001 C CNN
+	1    4125 12775
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4125 12775 4125 12925
+Connection ~ 4125 12925
+Wire Wire Line
+	4125 12925 4275 12925
+$Comp
+L power:GND #PWR0104
+U 1 1 61DEA06C
+P 4125 13450
+F 0 "#PWR0104" H 4125 13200 50  0001 C CNN
+F 1 "GND" H 4130 13277 50  0000 C CNN
+F 2 "" H 4125 13450 50  0001 C CNN
+F 3 "" H 4125 13450 50  0001 C CNN
+	1    4125 13450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4125 13325 4125 13450
+Connection ~ 4125 13325
+Wire Wire Line
+	4125 13325 4575 13325
+$Comp
+L Connector:ParallaxJoystick U7
+U 1 1 61E282FD
+P 9200 7075
+F 0 "U7" H 9200 7940 50  0000 C CNN
+F 1 "ParallaxJoystick" H 9200 7849 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 8650 7775 50  0001 C CNN
+F 3 "" H 8650 7775 50  0001 C CNN
+	1    9200 7075
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8550 7575 8550 8050
+Wire Wire Line
+	8550 8050 9200 8050
+Wire Wire Line
+	9850 8050 9850 7575
+Wire Wire Line
+	7900 8450 9200 8450
+Wire Wire Line
+	9200 8450 9200 8050
+Connection ~ 9200 8050
+Wire Wire Line
+	9200 8050 9850 8050
+Wire Wire Line
+	8550 6575 8550 6075
+Wire Wire Line
+	8550 6075 9850 6075
+Wire Wire Line
+	9850 6075 9850 6575
+Wire Wire Line
+	8175 6075 8550 6075
+Connection ~ 8550 6075
+Wire Wire Line
+	8175 6075 8175 8800
+Wire Wire Line
+	7825 6675 8550 6675
+Wire Wire Line
+	7825 6675 7825 10125
+Wire Wire Line
+	7750 7475 8550 7475
+Wire Wire Line
+	7750 7475 7750 10050
+$Comp
+L Device:Crystal Y1
+U 1 1 620A5CEA
+P 6875 8775
+F 0 "Y1" H 6875 8507 50  0000 C CNN
+F 1 "16Mhz" H 6875 8598 50  0000 C CNN
+F 2 "Crystal:Crystal_HC18-U_Vertical" H 6875 8775 50  0001 C CNN
+F 3 "~" H 6875 8775 50  0001 C CNN
+	1    6875 8775
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6725 8775 6725 9050
+Wire Wire Line
+	6725 9050 6825 9050
+Wire Wire Line
+	6825 9050 6825 9975
+Wire Wire Line
+	6825 9975 6625 9975
+Wire Wire Line
+	7025 8775 7025 9050
+Wire Wire Line
+	7025 9050 6925 9050
+Wire Wire Line
+	6925 9050 6925 10075
+Wire Wire Line
+	6925 10075 6625 10075
+$Comp
+L Device:C C1
+U 1 1 6210572F
+P 6725 8325
+F 0 "C1" H 6840 8371 50  0000 L CNN
+F 1 "22pF" H 6840 8280 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 6763 8175 50  0001 C CNN
+F 3 "~" H 6725 8325 50  0001 C CNN
+	1    6725 8325
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 62105F33
+P 7025 8325
+F 0 "C2" H 7140 8371 50  0000 L CNN
+F 1 "22pF" H 7140 8280 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 7063 8175 50  0001 C CNN
+F 3 "~" H 7025 8325 50  0001 C CNN
+	1    7025 8325
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6725 8775 6725 8475
+Connection ~ 6725 8775
+Wire Wire Line
+	7025 8775 7025 8475
+Connection ~ 7025 8775
+Wire Wire Line
+	7025 8175 7025 8000
+Wire Wire Line
+	7025 8000 6900 8000
+Wire Wire Line
+	6725 8000 6725 8175
+Wire Wire Line
+	7900 8450 7900 7650
+Wire Wire Line
+	7900 7650 6900 7650
+Wire Wire Line
+	6900 7650 6900 8000
+Connection ~ 7900 8450
+Connection ~ 6900 8000
+Wire Wire Line
+	6900 8000 6725 8000
+Wire Wire Line
+	8500 13125 6925 13125
+Wire Wire Line
+	6925 13125 6925 11475
+NoConn ~ 8500 13225
+$Comp
+L Device:Transformer_1P_1S T?
+U 1 1 6190F465
+P 3350 2075
+F 0 "T?" H 3350 2456 50  0000 C CNN
+F 1 "Transformer_1P_1S" H 3350 2365 50  0000 C CNN
+F 2 "" H 3350 2075 50  0001 C CNN
+F 3 "~" H 3350 2075 50  0001 C CNN
+	1    3350 2075
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

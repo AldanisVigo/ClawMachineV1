@@ -1,0 +1,24 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# ParallaxJoystick
+#
+DEF ParallaxJoystick U 0 40 Y Y 1 F N
+F0 "U" 0 0 50 H V C CNN
+F1 "ParallaxJoystick" 0 750 50 H V C CNN
+F2 "" -550 700 50 H I C CNN
+F3 "" -550 700 50 H I C CNN
+DRAW
+S -550 700 550 -700 0 1 0 N
+X L/R_+ 1 -650 500 100 R 50 50 1 1 O
+X L/R 2 -650 400 100 R 50 50 1 1 O
+X U/D 3 -650 -400 100 R 50 50 1 1 O
+X GND 4 -650 -500 100 R 50 50 1 1 O
+X U/D+ 5 650 500 100 L 50 50 1 1 O
+X L/R 6 650 400 100 L 50 50 1 1 O
+X U/D 7 650 -400 100 L 50 50 1 1 O
+X GND 8 650 -500 100 L 50 50 1 1 O
+ENDDRAW
+ENDDEF
+#
+#End Library
